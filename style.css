@@ -114,11 +114,11 @@ button:hover {
 /* Media Query for very small screens (like portrait mode on phones) */
 @media (max-width: 480px) {
     #question {
-        font-size: 10vw; /* Further decrease font size for very small screens */
+        font-size: 6vw; /* Further decrease font size for very small screens */
     }
 
     .sticker-gif {
-        width: 25vw;  /* Increase sticker GIF size further */
+        width: 15vw;  /* Increase sticker GIF size further */
     }
 
     button {
