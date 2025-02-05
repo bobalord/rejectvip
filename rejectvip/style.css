@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif; 
+    text-align: center; 
+    margin: 0; 
+    background-color: #fed6da; 
+}
+
+#container {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    height: 100vh; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gif-container, .yay-gif-container {
+    width: 50vw; /* Adjust the size based on the viewport width */
+    max-width: 300px; /* Optional: Set a max-width for the GIF */
+    height: auto; /* Maintain aspect ratio */
+}
+
+#gif-container img {
+    margin-bottom: 20px; /* Space between the gif and the question */
+}
+
+#question {
+    font-family: 'Dancing Script', cursive; 
+    font-size: 3.8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sticker-gif {
+    width: 3.5vw;  /* Adjust width of the small GIF based on viewport width */
+    height: auto;  /* Maintain aspect ratio */
+    margin-left: 1rem; /* Space between question and GIF */
+}
+
+#options {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 26px;
+    font-family: 'Dancing Script', cursive; 
+    background-color: #FB607F;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #9a0036;
+}
+
+#yay-gif-container {
+    margin-top: 20px;
+}
+
+#butterflyContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.butterfly {
+    position: absolute;
+    width: 5vw;
+    height: 5vw;
+    background-image: url('butterfly-removebg-preview.png'); /* Adjust this path if needed */
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: fly 10s ease-in-out infinite;
+}
+
+@keyframes fly {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    100% {
+        transform: translateX(600px) translateY(-600px);
+    }
+}
+
+@media (max-width: 768px) {
+    #question {
+        font-size: 8vw; /* Adjust font size for small screens */
+    }
+
+    .sticker-gif {
+        width: 20vw;  /* Make sticker GIF larger for phones */
+    }
+
+    button {
+        font-size: 4vw; /* Larger button text for small screens */
+    }
+
+    #message {
+        font-size: 6vw; /* Larger "Hurray" text */
+    }
+}
+
+/* Media Query for very small screens (like portrait mode on phones) */
+@media (max-width: 480px) {
+    #question {
+        font-size: 10vw; /* Further decrease font size for very small screens */
+    }
+
+    .sticker-gif {
+        width: 25vw;  /* Increase sticker GIF size further */
+    }
+
+    button {
+        font-size: 5vw; /* Even larger button text */
+    }
+
+    #message {
+        font-size: 7vw; /* Larger "Hurray" text */
+    }
+}
